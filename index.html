@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student result calculator</title>
+    <title>DOM manipulation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: grey;">
-    <div id='box'>
-        <h2>marks calculator</h2>
-        <input id="number" type="number" placeholder="enter number of subjects">
-        <button id="button">enter marks</button>
+<body>
+    <div id="box">
+        <h1 id="main_heading">this is heading</h1>
+        <input id='input_box'type="text" placeholder="enter new heading text">
+        <p id="para">this is a paragraph </p>
+        <button id="heading">change heading</button>
+        <button id="background">change background</button>
+        <button id="font_size">increase font size</button>
+        <button id="show_hide">show/hide para</button>
+        <button id="reset">rest</button>
 
-        <button id="calculate">calculate marks</button>
-        <div id="show_result"></div>
-        
+
     </div>
     <script src="script.js"></script>
-    
 </body>
 </html>

@@ -15,29 +15,14 @@
     transform: translate(-50%, -50%);
 
 }
-#button{
+button{
     color:aqua;
     border-radius: 10px;
     background: red;
     margin-top:10px ;
 }
-#calculate{
-    color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top: 10px;
-}
-
-#show_result{
-    background-color:yellow;
-    margin-top: 15px;
-    white-space: pre-line;     
-    word-wrap: break-word;     
-    font-size: 14px;
-    border-radius: 10px;
-}
-#number{
-        width: 80%;
+input{
+         width: 80%;
     padding: 10px;
     margin-top: 10px;
 

@@ -1,42 +1,31 @@
+let input_box=document.getElementById('input_box')
+let main=document.getElementById('main_heading')
+let para_graph=document.getElementById('para')
+document.getElementById('heading').addEventListener('click',()=>{
+    main.textContent=input_box.value || 'default heading';
 
-document.getElementById('button').addEventListener("click",function(){
-    let number_subjects=parseInt(document.getElementById('number').value)
-    let total=0
-    document.getElementById('show_result').textContent=` number of subjects ${number_subjects}`
-    
-    
-    
-    
 })
+document.getElementById('background').addEventListener('click',()=>{
+    document.body.style.backgroundColor="#"+Math.floor(Math.random()*16777215).toString(16)
 
-document.getElementById('calculate').addEventListener("click",function(){
-    let number_subjects=parseInt(document.getElementById('number').value)
-    let total=0
-    for(let i=1;i<=number_subjects;i++){
-        let mark=parseFloat(prompt(`enter marks for subject ${i}`))
-        total=total+mark
-    }
-    let average=total/number_subjects
-    let grade=""
-    let result=""
-    if(average>=90){
-        grade="A+"
-    }
-    else if(80<=average<90){
-        grade="B"
-    }
-    else if(70<=average<80){
-        grade="C"
-    }
-    else{
-        grade="D"
-        
-    }
-    
-    if(average>=33){
-        result='pass'
+})
+document.getElementById('font_size').addEventListener('click',()=>{
+    main.style.fontSize="40px"
+
+})
+document.getElementById('show_hide').addEventListener('click',()=>{
+    if(para_graph.style.display==='none'){
+        para_graph.style.display='block'
     }else{
-        result='fail'
+        para_graph.style.display='none'
     }
-    document.getElementById('show_result').textContent=`average is ${average} \n result is ${result}  \ntotal ${total}  \n grade ${grade}`
+})
+document.getElementById('reset').addEventListener('click',()=>{
+    main.textContent='this is heading'
+    document.body.style.backgroundColor='white'
+    main.style.fontSize='32px'
+    para_graph.style.display='block'
+    input_box.value=""
+    
+
 })
