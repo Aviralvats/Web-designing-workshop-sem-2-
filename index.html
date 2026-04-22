@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="source.js"></script>
-    <link rel="stylesheets" src="styles.css"></link>
-    
+    <title>employee salary management system</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body id="body">
-    <div id ="heading">
-        <h1>countdown timer</h1>
-    </div>
-    <div id ="countdown">
-        <button id="start">
-            start timer --
-        </button>
-    </div>
-    
+
+<body>
+    <div id="box">
+        
+        <h2>employee salary management system</h1>
+            <input id="name" type="text" placeholder="employee name">
+            <input id="empID" type="text" placeholder="employee ID">
+            <input id="salary" type="text" placeholder="Salary">
+            <input id="department" type="text" placeholder="Department">
+            <button id="add_employee">add employ</button>
+            <div id="buttons">
+                
+                <button id="display">display all</button>
+                <button id="salary_50k">salary>50000</button>
+                <button id="total">total salary</button>
+                <button id="average">average salary</button>
+                <button id="department_button">count by department</button>
+            </div>
+            
+            <div id="output"></div>
+        </div>
+        
+    <script src="script.js"></script>
 </body>
+
 </html>
