@@ -1,8 +1,5 @@
-#output{
-    white-space: pre-line;
-}
-#box{
- background-color: white;
+#box {
+    background-color: white;
     border-radius: 10px;
     border: 2px solid black;
      width: 250px;
@@ -16,93 +13,38 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#display{
-     color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top:10px ;
-}
-#salary_50k{
-     color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top:10px ;
-}
-#department_button{
-     color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top:10px ;
-}
-#average{
-     color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top:10px ;
-}
-#total{
-     color:aqua;
-    border-radius: 10px;
-    background: red;
-    margin-top:10px ;
-}
-
-#name{
-      width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    font-size: 14px;
-    outline: none;
-
 
 }
-
-#empID{
-  width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    font-size: 14px;
-    outline: none;
-
-}
-
-#salary{
-      width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    font-size: 14px;
-    outline: none;
-
-
-}
-#department{
-      width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    font-size: 14px;
-    outline: none;
-}
-
-#add_employee{
+#button{
     color:aqua;
     border-radius: 10px;
     background: red;
     margin-top:10px ;
+}
+#calculate{
+    color:aqua;
+    border-radius: 10px;
+    background: red;
+    margin-top: 10px;
+}
+
+#show_result{
+    background-color:yellow;
+    margin-top: 15px;
+    white-space: pre-line;     
+    word-wrap: break-word;     
+    font-size: 14px;
+    border-radius: 10px;
+}
+#number{
+        width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 14px;
+    outline: none;
+
 }

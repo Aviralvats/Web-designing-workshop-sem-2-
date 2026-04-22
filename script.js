@@ -1,77 +1,42 @@
-let employee=[]
 
-
-document.getElementById('add_employee').addEventListener('click',()=>{
-    let name=document.getElementById('name').value
-    let Id=document.getElementById('empID').value
-    let salary=parseFloat(document.getElementById('salary').value)
+document.getElementById('button').addEventListener("click",function(){
+    let number_subjects=parseInt(document.getElementById('number').value)
+    let total=0
+    document.getElementById('show_result').textContent=` number of subjects ${number_subjects}`
     
     
-    let deptName=document.getElementById('department').value
-    let emp={
-        "name":name,
-        "id":Id,
-        "salary":salary,
-        "department":deptName,
+    
+    
+})
 
+document.getElementById('calculate').addEventListener("click",function(){
+    let number_subjects=parseInt(document.getElementById('number').value)
+    let total=0
+    for(let i=1;i<=number_subjects;i++){
+        let mark=parseFloat(prompt(`enter marks for subject ${i}`))
+        total=total+mark
     }
-    employee.push(emp)
-    alert('employee added')
-})
-document.getElementById('display').addEventListener('click',()=>{
-    let all='all employess : \n'
-    employee.forEach(i=>{
-        all+=`${i.name}  | ${i.id} | ${i.salary} | ${i.department} \n`
-
-    })
-    document.getElementById('output').textContent=all;
-
-})
-document.getElementById('salary_50k').addEventListener('click',()=>{
-  
-   let show='salary > 50000: \n'
-   let filtered=employee.filter(i=>i.salary>50000)
-   
-   
-   if(filtered.length===0){
-    show='no employee has salary greater than 50k'
-
-   }else{
-        filtered.forEach(j=>{
-        show+=`${j.name}\n`
-        document.getElementById('output').textContent=show
+    let average=total/number_subjects
+    let grade=""
+    let result=""
+    if(average>=90){
+        grade="A+"
+    }
+    else if(80<=average<90){
+        grade="B"
+    }
+    else if(70<=average<80){
+        grade="C"
+    }
+    else{
+        grade="D"
         
-    } )
-    
-  }
-
-})
-
-document.getElementById('total').addEventListener('click',()=>{
-    let total=0;
-    employee.forEach(i=>{
-        total=total+i.salary
-    })
-    document.getElementById('output').textContent=`total salary is ${total}`
-})
-
-document.getElementById('average').addEventListener('click',()=>{
-    let total=0;
-    employee.forEach(i=>{
-        total=total+i.salary
-    })
-    if(employee.length!=0){
-        let average=total/employee.length
-        document.getElementById('output').textContent=`average salary is ${average}`
-    }else{
-        average=0
-        document.getElementById('output').textContent=`average salary is ${average}`
     }
-})
-
-document.getElementById('department_button').addEventListener('click',()=>{
     
-    let deptName=document.getElementById('department').value.trim().toLowerCase()
-    let count=employee.filter(i=>i.department.trim().toLowerCase()===deptName).length
-    document.getElementById('output').textContent=`employees in ${document.getElementById('department').value} :${count}`
+    if(average>=33){
+        result='pass'
+    }else{
+        result='fail'
+    }
+    document.getElementById('show_result').textContent=`average is ${average} \n result is ${result}  \ntotal ${total}  \n grade ${grade}`
 })
